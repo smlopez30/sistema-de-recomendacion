@@ -2,10 +2,8 @@ import pandas as pd
 from fastapi import FastAPI
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import linear_kernel
-from typing import List
-from typing import Union
+from typing import List, Union
 import psutil
-from functools import wraps
 
 # Cargar el dataset "peliculas"
 peliculas = pd.read_csv('datasets/peliculas.csv')
