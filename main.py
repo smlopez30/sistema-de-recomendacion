@@ -8,6 +8,9 @@ import psutil
 # Cargar el dataset "peliculas"
 peliculas = pd.read_csv('datasets/peliculas.csv')
 
+# Concatenamos las características relevantes en un solo campo para el análisis TF-IDF
+peliculas['combined_features'] = peliculas['franquicia'] + ' ' + peliculas['genres']
+
 # Creamos una matriz TF-IDF con las características de todas las películas
 tfidf = TfidfVectorizer(stop_words='english')
 features_matrix = tfidf.fit_transform(peliculas['combined_features'].fillna(''))
