@@ -6,7 +6,7 @@ from typing import List, Union
 import psutil
 
 # Cargar el dataset "peliculas"
-peliculas = pd.read_csv('datasets/peliculas.csv')
+peliculas = pd.read_csv('/datasets/')
 
 # Creamos una matriz TF-IDF con las características de todas las películas
 tfidf = TfidfVectorizer(stop_words='english')
